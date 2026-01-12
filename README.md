@@ -19,7 +19,7 @@ This project focuses on monitoring room temperature and controlling a cooler usi
   <img width="1000" height="569" alt="image" src="https://github.com/user-attachments/assets/fc64af0b-8295-4a21-85cc-45cc49d2acf1" />
 4. Working Principle:
 
-5.Sensing:
+Sensing:
 
 The LM35 senses the surrounding temperature and provides an Analog voltage output (10 mV per °C).
 Example:
@@ -29,22 +29,22 @@ Example:
 The STM32L4’s ADC converts the Analog voltage from LM35 into a digital value.
 ADC value = (Input Voltage / Reference Voltage) × (2ⁿ − 1)
 
-6.Processing:
+5.Processing:
 
 The microcontroller calculates the actual temperature using the formula:
 Temperature(°C)=(ADC_Value×Vref/(2^n-1))/10mV
 
-7.Data Transmission (UART):
+6.Data Transmission (UART):
 
 The temperature value is sent from STM32L4 to the PC via UART communication at a 
 predefined baud rate (e.g., 115200 bps).
 
-8.Data Logging / Display:
+7.Data Logging / Display:
 
 On the PC, serial terminal software displays the temperature readings continuously. 
 Optionally, readings can be saved to a file for further analysis.
 
-Formulas for conversion:
+8.Formulas for conversion:
 	Voltage V in = ((Digital value * Vref)/(2^n)-1))
 	Temperature = Vin *100
 		Here Vref=3.3 voltage
