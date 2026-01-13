@@ -1,6 +1,7 @@
 TEMPERATURE-MONITORING-SYSTEM
 
 1.Abstract: 
+
 This project focuses on monitoring room temperature and controlling a cooler using the STM32L4 microcontroller and LM35 temperature sensor. The LM35 provides an Analog voltage proportional to temperature, which is converted into a digital value using the STM32L4’s ADC. The processed temperature data is sent to a PC through UART communication, allowing real-time monitoring on a serial terminal. The system supports both automatic and manual control. In automatic mode, the cooler turns ON when the temperature exceeds 28°C and OFF when it drops below the threshold. In manual mode, the user can send commands such as ON, OFF, or AUTO through the serial window to control the cooler remotely. This project demonstrates a simple and efficient embedded solution suitable for home automation, environmental monitoring, and basic IoT applications. 
 
 
@@ -45,6 +46,7 @@ On the PC, serial terminal software displays the temperature readings continuous
 Optionally, readings can be saved to a file for further analysis.
 
 8.Formulas for conversion:
+
 	Voltage V in = ((Digital value * Vref)/(2^n)-1))
 	Temperature = Vin *100
 		Here Vref=3.3 voltage
@@ -88,11 +90,13 @@ STM32 Board USB	5V	Powers board & relay
 Common GND	All components share same ground	----
 
 10. Software Used
+    
 STM32CubeIDE – for program development and flashing the code.
 Arduino UNO – for viewing UART data on PC or Serial terminal.
 STM32CubeIDE – for configuring peripherals (ADC and UART).
 
  11.Algorithm / Steps
+ 
 	Initialize ADC and UART modules.
 	Read Analog value from LM35 sensor.
 	Convert ADC value to temperature.
@@ -101,11 +105,13 @@ STM32CubeIDE – for configuring peripherals (ADC and UART).
 	Repeat the process periodically (e.g., every 1 second).
 
 12.Example Output
+
 Serial Terminal Output:
 Temperature: 27.5 °C
 Temperature: 28.0 °C
 
 13.Applications
+
 	Environmental temperature monitoring
 	Smart home systems
 	Industrial process control
@@ -113,12 +119,14 @@ Temperature: 28.0 °C
 	IoT-based temperature data logging
 
 14.Advantages
+
 	Simple and low-cost system
 	Accurate and real-time monitoring
 	Easy to expand with wireless or IoT modules
 	Reliable UART communication
 
 15.Conclusion:
+
 	This project effectively monitors temperature using the STM32L4 microcontroller and the LM35 
   sensor while controlling a cooler in both automatic and manual modes. The system accurately reads
   temperature values, sends them to the PC through UART, and switches the relay based on user 
