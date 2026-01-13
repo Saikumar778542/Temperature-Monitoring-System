@@ -132,5 +132,6 @@ Temperature: 28.0 °C
   temperature values, sends them to the PC through UART, and switches the relay based on user 
   commands or predefined temperature limits. Overall, the system is simple, reliable, 
   and well-suited for basic automation and temperature control applications.
-    <img width="885" height="733" alt="image" src="https://github.com/user-attachments/assets/e39c12d1-0371-4402-9105-86cd41dbd04d" />
+   <img width="797" height="406" alt="Temperature _monitoring system " src="https://github.com/user-attachments/assets/11559093-90e2-4a9b-bccb-d15f1d2257e8" />
+
   
